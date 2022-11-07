@@ -16,6 +16,8 @@
 		FAC52AAF2917DF87002A2863 /* To_Do_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC52AAE2917DF87002A2863 /* To_Do_ListTests.swift */; };
 		FAC52AB92917DF87002A2863 /* To_Do_ListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC52AB82917DF87002A2863 /* To_Do_ListUITests.swift */; };
 		FAC52ABB2917DF87002A2863 /* To_Do_ListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC52ABA2917DF87002A2863 /* To_Do_ListUITestsLaunchTests.swift */; };
+		FAC52AC82917EE36002A2863 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC52AC72917EE36002A2863 /* TaskCell.swift */; };
+		FAC52ACA2917FB9C002A2863 /* NewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC52AC92917FB9C002A2863 /* NewTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		FAC52AB42917DF87002A2863 /* To Do ListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "To Do ListUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC52AB82917DF87002A2863 /* To_Do_ListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = To_Do_ListUITests.swift; sourceTree = "<group>"; };
 		FAC52ABA2917DF87002A2863 /* To_Do_ListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = To_Do_ListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FAC52AC72917EE36002A2863 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		FAC52AC92917FB9C002A2863 /* NewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 			children = (
 				FAC52A972917DF86002A2863 /* AppDelegate.swift */,
 				FAC52A992917DF86002A2863 /* SceneDelegate.swift */,
+				FAC52AC72917EE36002A2863 /* TaskCell.swift */,
+				FAC52AC92917FB9C002A2863 /* NewTask.swift */,
 				FAC52A9B2917DF86002A2863 /* ViewController.swift */,
 				FAC52A9D2917DF86002A2863 /* Main.storyboard */,
 				FAC52AA02917DF87002A2863 /* Assets.xcassets */,
@@ -258,7 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC52AC82917EE36002A2863 /* TaskCell.swift in Sources */,
 				FAC52A9C2917DF86002A2863 /* ViewController.swift in Sources */,
+				FAC52ACA2917FB9C002A2863 /* NewTask.swift in Sources */,
 				FAC52A982917DF86002A2863 /* AppDelegate.swift in Sources */,
 				FAC52A9A2917DF86002A2863 /* SceneDelegate.swift in Sources */,
 			);
