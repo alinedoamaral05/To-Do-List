@@ -12,11 +12,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     var taskView: [NewTask] = []
+
+    @IBOutlet weak var taskNameTextField: UITextField!
     
-    @IBAction func taskNameTextField(_ sender: UITextField) {
-    }
+    @IBOutlet weak var taskDescriptionTextField: UITextField!
     
-    @IBAction func taskDescriptionTextField(_ sender: UITextField) {
+    
+    @IBAction func AddTaskButton(_ sender: Any) {
+        guard let taskNameText = taskNameTextField.text else { return }
+        guard let taskDescriptionText = taskNameTextField.text else { return }
+        taskView.append(NewTask(
+            taskName: taskNameText,
+            taskDescription: taskDescriptionText))
+        tableView.reloadData()
     }
     
     override func viewDidLoad() {
@@ -24,14 +32,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.delegate = self
         tableView.dataSource = self
-        taskView = addTask()
+        
     }
 
-    func addTask() -> [NewTask] {
-        return [
-        NewTask(taskName: "Clean my room", taskDescription: "Put garbage out, swipe with broom")
-        ]
-    }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -43,6 +46,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath) as! TaskCell
         cell.setNewTask(taskView[indexPath.row])
+        cell.setDeleteButton(
+         {
+            self.taskView.remove(at: indexPath.row)
+        })
         return cell
     }
     
